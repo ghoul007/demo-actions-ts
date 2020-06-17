@@ -3,7 +3,7 @@ import {wait} from './wait'
 
 async function run(): Promise<void> {
   try {
-    core.setOutput('ghoul', 'https://ahmedghoul.com')
+    core.setOutput('release-url', 'https://ahmedghoul.com')
     const ms: string = core.getInput('milliseconds')
     core.debug(`Waiting ${ms} milliseconds ...`)
 
