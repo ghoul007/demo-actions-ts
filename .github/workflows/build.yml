@@ -3,10 +3,11 @@ on:
   push:
     branches:
       - master
-  create:
+      - development
+
 jobs:
-  test:
-    name: Test
+  build:
+    name: Build and Test
     runs-on: ${{ matrix.os }}
     strategy:
       matrix:
@@ -15,7 +16,6 @@ jobs:
       - name: Get the sources
         uses: actions/checkout@v1
       - name: Restore the dependencies
-        id: ghoul
-        uses: ./
-      - name: Print the URL
-        run: echo ${{ steps.ghoul.outputs.release-url }}
+        run: npm ci
+      - name: Build
+        run: npm run all

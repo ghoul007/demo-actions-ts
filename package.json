@@ -1,5 +1,5 @@
 {
-  "name": "typescript-action",
+  "name": "github-action-ts",
   "version": "0.0.0",
   "private": true,
   "description": "TypeScript template action",
@@ -15,14 +15,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/actions/typescript-action.git"
+    "url": "git+https://github.com/ghoul007/demo-actions-ts.git"
   },
   "keywords": [
     "actions",
     "node",
     "setup"
   ],
-  "author": "YourNameOrOrganization",
+  "author": "Ahmed GHOUL",
   "license": "MIT",
   "dependencies": {
     "@actions/core": "^1.2.0"
