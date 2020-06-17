@@ -1,4 +1,4 @@
-name: Build
+name: Test
 on:
   push:
     branches:
@@ -14,7 +14,7 @@ jobs:
     steps:
       - name: Get the sources
         uses: actions/checkout@v1
-      - name: Restore the dependencies
+      - name: Create a release
         id: ghoul
         uses: ./
       - name: Print the URL
