@@ -3,19 +3,17 @@ on:
   push:
     branches:
       - master
-  create:
+  milestone:
+    types: [closed]
 jobs:
   test:
     name: Test
-    runs-on: ${{ matrix.os }}
-    strategy:
-      matrix:
-        os: [windows-latest, ubuntu-latest]
+    runs-on: ubuntu-latest
     steps:
       - name: Get the sources
         uses: actions/checkout@v1
-      - name: Create a release
-        id: ghoul
+      - name: Create a release draft for a milestone
+        id: create-release-draft
         uses: ./
-      - name: Print the URL
-        run: echo ${{ steps.ghoul.outputs.release-url }}
+      - name: Print the URL of the release draft
+        run: echo ${{ steps.create-release-draft.outputs.release-url }}
