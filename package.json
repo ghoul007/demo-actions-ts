@@ -25,7 +25,9 @@
   "author": "Ahmed GHOUL",
   "license": "MIT",
   "dependencies": {
-    "@actions/core": "^1.2.0"
+    "@actions/core": "^1.2.0",
+    "@actions/github": "^3.0.0",
+    "semver": "^7.3.2"
   },
   "devDependencies": {
     "@types/jest": "^24.0.23",
